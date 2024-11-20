@@ -18,3 +18,4 @@ A full-stack platform that connects learners and teachers to share and learn new
 3. Run the application using `npm start` and `Spring Boot`.
 
 
+![skillshareing-hub pic3](https://github.com/user-attachments/assets/641cfc76-8ad0-42a6-b1e0-e7477fa552d3)
