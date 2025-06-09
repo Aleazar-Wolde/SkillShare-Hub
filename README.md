@@ -18,8 +18,3 @@ A full-stack platform that connects learners and teachers to share and learn new
 2. Install dependencies.
 3. Run the application using `npm start` and `Spring Boot`.
 
-
-
-![SkillSharingHub](https://github.com/user-attachments/assets/543a8f72-fd0e-4015-b5b5-62321946e079)
-![Skillsharing](https://github.com/user-attachments/assets/478e3d60-41ef-4c12-b838-ac201d201b8b)
-![SkillShare](https://github.com/user-attachments/assets/1ce97386-2b6a-4b2b-ae60-4b18d8873b00)
