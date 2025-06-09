@@ -1,5 +1,5 @@
 # SkillShare Hub
-![image](https://github.com/user-attachments/assets/79a9c15b-e5ad-4c43-b521-aaf4086b4a79)
+
 
 A full-stack platform that connects learners and teachers to share and learn new skills.
 
