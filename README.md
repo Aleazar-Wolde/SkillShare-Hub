@@ -1,117 +1,124 @@
-🎓 SkillShare Hub
+# **SkillShare Hub**
 
-A full-stack skill-sharing platform that connects people who want to teach skills with those who want to learn them.
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Backend-brightgreen)
+![React](https://img.shields.io/badge/React-Frontend-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-lightgrey)
 
-The platform enables users to create accounts, publish skills they can teach, discover skills offered by others, and interact through a modern web interface.
-This project demonstrates the design and implementation of a scalable full-stack application using Java Spring Boot and React, with a focus on RESTful APIs, layered architecture, and database integration.
+SkillShare Hub is a **full-stack skill-sharing platform** that connects learners and teachers in one place.  
+It allows users to create accounts, build profiles, share skills they can teach, and explore skills offered by others through a modern web application built with **Spring Boot**, **React**, and **MySQL**.
 
-🚀 Project Overview
+---
 
-SkillShare Hub was built to simulate a real-world learning marketplace where individuals can exchange knowledge and develop new skills through community interaction.
+## **Table of Contents**
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Architecture](#architecture)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Back End Setup](#back-end-setup)
+  - [Front End Setup](#front-end-setup)
+  - [Database Setup](#database-setup)
+- [API Documentation](#api-documentation)
+- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-The application follows a client–server architecture, where a React frontend communicates with a Spring Boot backend via REST APIs, and all application data is stored in a MySQL relational database.
+---
 
-The system focuses on:
+## **Overview**
 
-clean backend architecture
+SkillShare Hub was built to simulate a real-world platform where users can both **teach** and **learn** skills.  
+The application demonstrates full-stack development principles such as **REST API design**, **layered backend architecture**, **frontend-backend integration**, and **relational database management**.
 
-modular service design
+This project highlights practical experience in:
+- building a Spring Boot REST API
+- creating a responsive React frontend
+- integrating MySQL for persistent data storage
+- organizing backend logic using controller, service, repository, and domain layers
 
-secure user authentication
+---
 
-scalable API development
+## **Features**
 
-✨ Core Features
-👤 User Authentication & Profiles
+- **User Authentication**: Register and log in to access the platform securely.
+- **User Profiles**: Create and manage personal user profiles.
+- **Skill Sharing System**: Users can post and share skills they want to teach.
+- **Skill Discovery**: Browse and explore skills shared by other users.
+- **Responsive UI**: Frontend designed to work across different screen sizes.
+- **Full-Stack Integration**: React frontend communicates with Spring Boot REST APIs.
+- **Database Persistence**: User and skill data stored in MySQL.
 
-Users can register, log in, and manage personal profiles within the platform. Authentication ensures that users have secure access to their accounts and personalized content.
+---
 
-📚 Skill Sharing System
+## **Technologies Used**
 
-Users can publish skills they are willing to teach, allowing others to discover and learn from them. Skills can be browsed and explored across the platform.
+### **Back End**
+- **Java**
+- **Spring Boot**
+- **Spring MVC**
+- **Spring Data JPA**
+- **Hibernate**
 
-🔎 Skill Discovery
+### **Front End**
+- **React**
+- **JavaScript**
+- **HTML5**
+- **CSS3**
 
-The platform allows learners to explore available skills and find instructors offering knowledge in different categories.
+### **Database**
+- **MySQL**
 
-📱 Responsive User Interface
+### **Tools**
+- **Git & GitHub**
+- **Postman**
+- **MySQL Workbench**
+- **Maven**
 
-The React frontend provides a clean and responsive interface that allows users to easily navigate through the platform and interact with features.
+---
 
-🛠️ Tech Stack
-Backend
+## **Architecture**
 
-Java
+SkillShare Hub follows a **layered architecture** to keep the application modular and maintainable.
 
-Spring Boot
+- **Controller Layer**: Handles HTTP requests and exposes REST endpoints.
+- **Service Layer**: Contains the business logic of the application.
+- **Repository Layer**: Manages database operations using JPA repositories.
+- **Domain Layer**: Defines entities and core data models.
+- **Frontend Layer**: React-based client that consumes backend APIs.
 
-Spring MVC
+This separation of concerns makes the project easier to test, scale, and maintain.
 
-JPA / Hibernate
+---
 
-RESTful API architecture
+## **Project Structure**
 
-Frontend
-
-React
-
-JavaScript
-
-HTML5
-
-CSS3
-
-Database
-
-MySQL
-
-Tools & Development
-
-Git & GitHub
-
-Postman (API testing)
-
-MySQL Workbench
-
-🏗️ System Architecture
-
-The backend is structured using a layered architecture to ensure separation of concerns and maintainable code.
-
-Controller Layer
-Handles HTTP requests and exposes REST endpoints.
-
-Service Layer
-Contains business logic and application rules.
-
-Repository Layer
-Manages database interaction using JPA repositories.
-
-Domain Layer
-Defines core entities and data models.
-
-The React frontend communicates with the backend through REST APIs, allowing the application to remain modular and scalable.
-
-📁 Project Structure
-Backend
+### **Back End**
+```bash
 src/main/java/com/skillsharehub
-│
 ├── controller
 ├── service
 ├── repository
 ├── domain
 └── config
-Frontend
+Front End
 src/
-│
 ├── components
 ├── pages
 ├── services
 ├── hooks
 └── styles
-⚙️ Getting Started
+Getting Started
+
+Follow these steps to run SkillShare Hub on your local machine.
+
 Prerequisites
 
-Make sure the following tools are installed:
+Make sure you have the following installed:
 
 Java 17+
 
@@ -121,48 +128,126 @@ npm
 
 MySQL
 
-1️⃣ Clone the Repository
-git clone https://github.com/yourusername/skillshare-hub.git
-cd skillshare-hub
-2️⃣ Backend Setup
+Maven
 
-Run the Spring Boot application:
+Back End Setup
 
-cd backend
-./mvnw spring-boot:run
-3️⃣ Frontend Setup
+Clone the repository:
 
-Install dependencies and start the React application:
+git clone https://github.com/your-username/skillshare-hub.git
+cd skillshare-hub/backend
 
-cd frontend
-npm install
-npm start
-4️⃣ Configure Database
-
-Update the application.properties file with your MySQL credentials.
-
-Example:
+Configure your database connection in application.properties:
 
 spring.datasource.url=jdbc:mysql://localhost:3306/skillsharehub
 spring.datasource.username=root
 spring.datasource.password=yourpassword
-🔗 Example API Endpoints
-POST   /api/auth/register
-POST   /api/auth/login
-GET    /api/skills
-POST   /api/skills
-GET    /api/users/{id}
+spring.jpa.hibernate.ddl-auto=update
 
-These endpoints allow the frontend to authenticate users, retrieve skill listings, and manage user profiles.
+Run the Spring Boot application:
 
-🚧 Future Improvements
+./mvnw spring-boot:run
 
-Skill booking and scheduling system
+The backend will start on:
 
-Messaging between learners and instructors
+http://localhost:8080
+Front End Setup
 
-Skill ratings and reviews
+Navigate to the frontend directory:
 
-Notification system
+cd ../frontend
 
-Cloud deployment (AWS / Docker)
+Install dependencies:
+
+npm install
+
+Start the React development server:
+
+npm start
+
+The frontend will start on:
+
+http://localhost:3000
+Database Setup
+
+Open MySQL Workbench or your MySQL client.
+
+Create a database named:
+
+CREATE DATABASE skillsharehub;
+
+Make sure your backend application.properties file matches your local MySQL credentials.
+
+API Documentation
+
+The backend exposes RESTful APIs for authentication, profile management, and skill-sharing functionality.
+
+Authentication API
+
+POST /api/auth/register → Register a new user
+
+POST /api/auth/login → Authenticate a user
+
+User API
+
+GET /api/users/{id} → Get a user profile
+
+PUT /api/users/{id} → Update a user profile
+
+Skill API
+
+GET /api/skills → Retrieve all skills
+
+POST /api/skills → Create a new skill listing
+
+PUT /api/skills/{id} → Update a skill listing
+
+DELETE /api/skills/{id} → Delete a skill listing
+
+Future Improvements
+
+Add messaging between learners and teachers
+
+Add skill categories and filtering
+
+Add ratings and reviews
+
+Add scheduling or booking functionality
+
+Improve authentication with JWT and role-based access control
+
+Deploy the platform using Docker and AWS
+
+Contributing
+
+Contributions are welcome. To contribute:
+
+Fork the repository
+
+Create a feature branch:
+
+git checkout -b feature/your-feature-name
+
+Commit your changes:
+
+git commit -m "Add your feature"
+
+Push to your branch:
+
+git push origin feature/your-feature-name
+
+Open a pull request
+
+License
+
+This project is licensed under the MIT License.
+
+Contact
+
+For questions or collaboration, feel free to reach out:
+
+Email: walazer2112@gmail.com
+
+GitHub: Aleazar-Wolde
+
+LinkedIn: Aleazar Wolde
